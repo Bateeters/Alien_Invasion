@@ -73,6 +73,7 @@ class AlienInvasion:
             # Destroy existing bullets and create new alien fleet.
             self.bullets.empty()
             self._create_fleet()
+            self.settings.increase_speed()
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
