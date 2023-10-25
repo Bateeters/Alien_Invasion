@@ -21,10 +21,10 @@ class Settings:
 
         # Alien settings
         self.alien_speed = 1.0
-        self.fleet_drop_speed = 200 # Adjusted for testing purposes. Base speed is 10
+        self.fleet_drop_speed = 10 # Adjusted for testing purposes. Base speed is 10
         
         # How quickly the game speeds up
-        self.speedup_scale = 1.1
+        self.speedup_scale = 1.25
 
         self.initialize_dynamic_settings()
 
