@@ -25,7 +25,7 @@ class AlienInvasion:
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption('Alien Invasion')
 
-        # Create an instance to store game statistics.
+        # Create an instance to store game statistics and scoreboard.
         self.stats = GameStats(self)
         self.sb = Scoreboard(self)
 
@@ -76,6 +76,10 @@ class AlienInvasion:
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
+        
+        if collisions:
+            self.stats.score += self.settings.alien_points
+            self.sb.prep_score()
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
